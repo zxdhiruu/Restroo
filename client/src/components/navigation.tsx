@@ -70,12 +70,16 @@ export default function Navigation() {
           </div>
           
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="text-slate-600 hover:text-primary font-medium">
-              Sign In
-            </Button>
-            <Button className="bg-primary hover:bg-primary/90 text-white font-medium">
-              Start Free Trial
-            </Button>
+            <Link href="/login">
+              <Button variant="ghost" className="text-slate-600 hover:text-primary font-medium">
+                Sign In
+              </Button>
+            </Link>
+            <Link href="/signup">
+              <Button className="bg-primary hover:bg-primary/90 text-white font-medium">
+                Start Free Trial
+              </Button>
+            </Link>
           </div>
           
           {/* Mobile menu */}
@@ -98,12 +102,16 @@ export default function Navigation() {
                     </button>
                   ))}
                   <div className="pt-4 border-t border-slate-200 space-y-2">
-                    <Button variant="ghost" className="w-full justify-start text-slate-600 hover:text-primary font-medium">
-                      Sign In
-                    </Button>
-                    <Button className="w-full bg-primary hover:bg-primary/90 text-white font-medium">
-                      Start Free Trial
-                    </Button>
+                    <Link href="/login">
+                      <Button variant="ghost" className="w-full justify-start text-slate-600 hover:text-primary font-medium">
+                        Sign In
+                      </Button>
+                    </Link>
+                    <Link href="/signup">
+                      <Button className="w-full bg-primary hover:bg-primary/90 text-white font-medium">
+                        Start Free Trial
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </SheetContent>

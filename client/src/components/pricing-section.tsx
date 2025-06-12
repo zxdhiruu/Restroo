@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Check } from "lucide-react";
+import { Link } from "wouter";
 
 export default function PricingSection() {
   const plans = [
@@ -113,15 +114,17 @@ export default function PricingSection() {
                   ))}
                 </ul>
                 
-                <Button 
-                  className={`w-full py-3 px-6 font-semibold transition-colors duration-300 ${
-                    plan.popular 
-                      ? "bg-white text-primary hover:bg-slate-50" 
-                      : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                  }`}
-                >
-                  {plan.buttonText}
-                </Button>
+                <Link href={plan.buttonText === "Contact Sales" ? "/contact" : "/signup"}>
+                  <Button 
+                    className={`w-full py-3 px-6 font-semibold transition-colors duration-300 ${
+                      plan.popular 
+                        ? "bg-white text-primary hover:bg-slate-50" 
+                        : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                    }`}
+                  >
+                    {plan.buttonText}
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}

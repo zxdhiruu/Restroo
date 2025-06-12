@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { Link } from "wouter";
 
 export default function HeroSection() {
   const scrollToContact = () => {
@@ -23,12 +24,14 @@ export default function HeroSection() {
               Handle orders, inventory, staff, and analytics all in one powerful solution.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:justify-center lg:justify-start">
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-              >
-                Start 14-Day Free Trial
-              </Button>
+              <Link href="/signup">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
+                  Start 14-Day Free Trial
+                </Button>
+              </Link>
               <Button 
                 variant="outline" 
                 size="lg"
